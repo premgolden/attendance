@@ -1,0 +1,129 @@
+
+<!DOCTYPE html>
+<html lang="en" data-theme="cosmic">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>Attendify | Academic Hub</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --bg-app: #12122b;
+            --bg-card: #1e1e3f;
+            --bg-nav: #181835;
+            --text-main: #ffffff;
+            --text-dim: #94a3b8;
+            --accent: #f472b6;
+            --accent-gradient: linear-gradient(135deg, #f472b6 0%, #fb923c 100%);
+            --border: rgba(255, 255, 255, 0.05);
+        }
+
+        [data-theme='onyx'] {
+            --bg-app: #050505;
+            --bg-card: #121212;
+            --bg-nav: #0a0a0a;
+            --text-main: #ffffff;
+            --text-dim: #71717a;
+            --accent: #3b82f6;
+            --accent-gradient: linear-gradient(135deg, #3b82f6 0%, #1e40af 100%);
+        }
+
+        [data-theme='cloud'] {
+            --bg-app: #f8fafc;
+            --bg-card: #ffffff;
+            --bg-nav: #f1f5f9;
+            --text-main: #0f172a;
+            --text-dim: #64748b;
+            --accent: #6366f1;
+            --accent-gradient: linear-gradient(135deg, #6366f1 0%, #4338ca 100%);
+            --border: rgba(0, 0, 0, 0.05);
+        }
+
+        [data-theme='aurora'] {
+            --bg-app: #0f172a;
+            --bg-card: #1e293b;
+            --bg-nav: #0f172a;
+            --text-main: #f1f5f9;
+            --text-dim: #94a3b8;
+            --accent: #10b981;
+            --accent-gradient: linear-gradient(135deg, #10b981 0%, #059669 100%);
+        }
+
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: var(--bg-app);
+            color: var(--text-main);
+            min-height: 100vh;
+            margin: 0;
+            transition: background-color 0.3s ease;
+            -webkit-font-smoothing: antialiased;
+        }
+
+        /* Default is mixed case now */
+        * {
+            text-transform: none;
+        }
+
+        .glass-card {
+            background-color: var(--bg-card);
+            border-radius: 2rem;
+            border: 1px solid var(--border);
+            box-shadow: 0 4px 24px rgba(0, 0, 0, 0.25);
+        }
+
+        .nav-pill {
+            background-color: var(--bg-nav);
+            border: 1px solid var(--border);
+            backdrop-filter: blur(25px);
+            box-shadow: 0 -10px 40px rgba(0,0,0,0.3);
+        }
+
+        .btn-accent {
+            background: var(--accent-gradient);
+            color: white;
+            transition: all 0.25s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+
+        .btn-accent:active {
+            transform: scale(0.92);
+        }
+
+        .view-transition {
+            animation: slideIn 0.35s ease-out;
+        }
+
+        @keyframes slideIn {
+            from { opacity: 0; transform: translateY(10px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        ::-webkit-scrollbar { width: 4px; }
+        ::-webkit-scrollbar-thumb { background: rgba(255, 255, 255, 0.1); border-radius: 10px; }
+
+        input[type="date"]::-webkit-calendar-picker-indicator {
+            filter: invert(1);
+            cursor: pointer;
+            padding: 4px;
+        }
+
+        /* Special casing for headers if needed */
+        .text-cap { text-transform: uppercase; letter-spacing: 0.1em; }
+    </style>
+<script type="importmap">
+{
+  "imports": {
+    "react": "https://esm.sh/react@^19.2.3",
+    "react-dom/": "https://esm.sh/react-dom@^19.2.3/",
+    "react/": "https://esm.sh/react@^19.2.3/"
+  }
+}
+</script>
+<link rel="stylesheet" href="/index.css">
+</head>
+<body>
+    <div id="root"></div>
+<script type="module" src="/index.tsx"></script>
+</body>
+</html>
